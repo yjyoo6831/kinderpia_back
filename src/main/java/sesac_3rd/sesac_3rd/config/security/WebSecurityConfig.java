@@ -47,7 +47,12 @@ public class WebSecurityConfig {
                                 "/api/report/**",
                                 "/api/manager/**",
                                 "/admin/**",
-                                "/ws/**"
+                                "/ws/**",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",  // OpenAPI 명세
+                                "/swagger-ui.html", // Swagger UI 페이지
+                                "/swagger-resources/**", // Swagger 리소스
+                                "/webjars/**"      // Swagger UI 웹JAR
                         )
                         .permitAll()
                         .anyRequest().authenticated());
