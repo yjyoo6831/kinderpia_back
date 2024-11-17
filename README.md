@@ -1,4 +1,6 @@
-# :seedling: Kinderpia 
+# :seedling: Kinderpia
+![image](https://github.com/user-attachments/assets/268aa27c-f1da-4a2c-8eca-ebb656a43084)
+
 ## 프로젝트 소개
 
 * 주제 : 부모와 아이들이 함께할 공간을 소개하며, 모임을 만들어 함께 할 수 있는 웹 페이지
@@ -21,7 +23,7 @@
 #### 유예진 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/yjyoo6831)
 - 장소 검색, 리뷰 CRUD
 #### 윤예슬 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/errorose)
-- 모임 CRUD
+- 모임 관리 시스템 개발
 
 <br>
 
