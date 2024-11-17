@@ -1,4 +1,3 @@
-# :seedling: Kinderpia
 ![image](https://github.com/user-attachments/assets/268aa27c-f1da-4a2c-8eca-ebb656a43084)
 
 ## 프로젝트 소개
