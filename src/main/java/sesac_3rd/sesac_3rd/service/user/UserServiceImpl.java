@@ -1,5 +1,8 @@
 package sesac_3rd.sesac_3rd.service.user;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,6 +63,10 @@ public class UserServiceImpl implements UserService {
     private TokenProvider tokenProvider;
 
     // 로그인
+    @Operation(summary = "Login API", description = "로그인")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "로그인 완료")
+    })
     @Override
     public LoginResponse userLogin(final String loginId, final String userPw) {
         final User originUser = userRepository.findByLoginId(loginId);

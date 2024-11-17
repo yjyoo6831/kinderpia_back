@@ -41,7 +41,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
 	implementation 'org.springframework.boot:spring-boot-starter-messaging' // WebSocket EventListener
-
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'   // swagger
 }
 
 tasks.named('test') {

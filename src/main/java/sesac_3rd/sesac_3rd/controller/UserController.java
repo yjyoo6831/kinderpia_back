@@ -1,5 +1,9 @@
 package sesac_3rd.sesac_3rd.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +23,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/user")
+@Tag(name = "User Controller", description = "사용자 API")
 public class UserController {
 
     @Autowired
@@ -28,7 +33,10 @@ public class UserController {
     private PasswordEncoder passwordEncoder;
 
     // 로그인
-    // 로그인 완료 후 리턴값을 뭘 해야할지는 정해야함
+    @Operation(summary = "Login API", description = "로그인")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "로그인 완료")
+    })
     @PostMapping("/login")
     public ResponseEntity<ResponseHandler<Boolean>> userLogin(@RequestBody LoginFormDTO dto, HttpServletResponse httpResponse) {
         LoginResponse loginResponse = userService.userLogin(dto.getLoginId(), dto.getUserPw());
