@@ -24,7 +24,7 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
             "u.nickname, " +
             "u.profileImg, " +
             "u.isBlacklist, " +
-            "COUNT(l) AS likeCount, " +
+            "(SELECT COUNT(l) FROM Likes l WHERE l.review.id = r.id),  " +
             "CASE WHEN l.user.id = :userId THEN true ELSE false END AS isLikedByUser ) " +
             "FROM Review r " +
             "JOIN r.user u " +
@@ -33,10 +33,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
             "GROUP BY r.id, u.id " +
             "ORDER BY r.createdAt DESC")
     Page<ReviewUserDTO> findByPlace_PlaceId(@Param("placeId") Long placeId, @Param("userId") Long userId, Pageable pageable);
-
-    // 로그인 유저 리뷰별 좋아요 여부
-//   @Query("select round(avg(r.star)) from Review r where place_id=:placeId and is_deleted=false")
-
 
     // 장소 별 평균 별점 조회
     @Query(value = "select round(avg(r.star)) from review r where place_id=:placeId and is_deleted=false", nativeQuery = true)
