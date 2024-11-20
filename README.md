@@ -1,11 +1,11 @@
 ![image](https://github.com/user-attachments/assets/268aa27c-f1da-4a2c-8eca-ebb656a43084)
 
-## 프로젝트 소개
+## 📢 프로젝트 소개
 
 * 주제 : 부모와 아이들이 함께할 공간을 소개하며, 모임을 만들어 함께 할 수 있는 웹 페이지
 * 기획 의도 : 단순한 서울시 공간 소개를 넘어 서로의 경험을 나누며 소통할 수 있는 네트워크 서비스를 제공하고자 한다.
 
-* 기간 : 2024.10.21 ~ 2024.11.08
+* 개발 기간 : 2024.10.21 ~ 2024.11.08
 * Test ID: test3859
 * Test Password: test1234
 
@@ -13,20 +13,23 @@
 
 ## :raising_hand: Backend Developers
 #### 김어진 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/qldirr)
-- 유저, 관리자
+- 유저, 관리자 기능 담당
 
 #### 석원준 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/ymind14563)
-- 채팅, 신고, 파이프라인 자동화 구축
-- **서버 배포**: AWS (EC2, RDS, S3), NGINX
+- 채팅, 신고, 파이프라인 자동화 구축, 배포 담당
+- 배포: AWS (EC2, RDS, S3), NGINX
 
 #### 유예진 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/yjyoo6831)
-- 장소 검색, 리뷰 CRUD
+- 장소, 리뷰 CRUD 담당
+  
 #### 윤예슬 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/errorose)
-- 모임 관리 시스템 개발
+- 모임 관리 시스템 개발 담당
 
 <br>
 
-## 🧰 Architecture
+## 🧰 주요 ERD
+![ERD](https://github.com/user-attachments/assets/7d41d709-e5e6-4418-a3e8-92770d9b1a98)
+
 
 
 ## ❓ 주요 기술 채택 이유
@@ -41,14 +44,42 @@
 
 <br>
 
-## 주요 페이지 소개 
+
+## 페이지 및 기능 소개 
 
 ## 메인 페이지 
-![메인페이지](https://github.com/user-attachments/assets/9654fd23-52f6-41aa-ae93-e66270675524)
+<img src="https://github.com/user-attachments/assets/3332690a-2a31-413f-9a6c-6606b412eb72" width="auto" height="auto" alt="메인페이지 시작화면">
 
-## 장소 상세 페이지 
-![장소상세](https://github.com/user-attachments/assets/018f3597-96fb-42a3-904a-5df0868e843c)
+## 로그인 페이지
+- Spring Security를 적용하여 로그인한 유저에 한해 모임생성, 리뷰 쓰기 기능을 제공한다. 
+<img src="https://github.com/user-attachments/assets/646bd240-8742-4e46-a917-997d7ce949f4" width="243" height="auto" alt="로그인 페이지">
+
+## 장소 상세 및 리뷰 페이지 
+- 장소별 후기 목록과 후기별 좋아요 개수를 보여준다.
+<img src="https://github.com/user-attachments/assets/d623c84b-39bc-4f5a-98ae-7cdff044d1db"  width="auto" height="auto" alt="장소 상세조회">
+<img src="https://github.com/user-attachments/assets/57b711b9-45a0-4f35-a0f2-0717c9162b61"  width="auto" height="auto" alt="리뷰작성관리">
 
 ## 장소 검색 페이지 
-![장소검색](https://github.com/user-attachments/assets/ab79221d-8107-4ca7-bcde-d2f1a07efaee)
+- 장소명, 지역 범위를 통해 장소를 검색하고, 별점순으로 필터할 수 있다.
+<img src="https://github.com/user-attachments/assets/695a0e93-0dca-4084-8dba-0c37771e13e8"  width="auto" height="auto" alt="장소 검색">
 
+## 모임 생성 페이지 
+- 장소, 모임 날짜, 모임 인원을 지정하여 모임 생성을 할 수 있다.
+<img src="https://github.com/user-attachments/assets/94873c45-a95a-440f-abba-fca146317e69"  width="243" height="auto" alt=" 모임 생성">
+
+## 모임 참여 페이지 
+- 참여하고 싶은 모임에 참여가 가능하다. 
+<img src="https://github.com/user-attachments/assets/4d29f7df-13ef-4c6b-85d1-e539535e29f5"  width="243" height="auto" alt=" 모임 참여">
+
+## 채팅 
+- 참여한 모임 인원들에 한해 양방향 통신이 가능한 채팅기능을 제공한다. 
+<img src="https://github.com/user-attachments/assets/addd56ea-f22b-4273-8250-7246e3eb811f"  width="auto" height="auto" alt="채팅"> 
+
+## 관리자 페이지 
+1. 회원 통계
+<br>
+![adminuser](https://github.com/user-attachments/assets/c435a81e-e2ff-4ac1-9e1d-f018fd98fdd5)
+<br>
+2. 신고 조회
+<br>
+![adminreport](https://github.com/user-attachments/assets/a4def0d7-5ea3-4a62-b011-de689511273c)
