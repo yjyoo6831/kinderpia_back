@@ -78,8 +78,11 @@
 ## 관리자 페이지 
 1. 회원 통계
 <br>
+
 ![adminuser](https://github.com/user-attachments/assets/c435a81e-e2ff-4ac1-9e1d-f018fd98fdd5)
-<br>
+
+
 2. 신고 조회
 <br>
+
 ![adminreport](https://github.com/user-attachments/assets/a4def0d7-5ea3-4a62-b011-de689511273c)
