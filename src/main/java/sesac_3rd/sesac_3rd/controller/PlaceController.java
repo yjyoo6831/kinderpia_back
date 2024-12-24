@@ -29,6 +29,7 @@ public class PlaceController {
                     page1,
                     HttpStatus.OK.value(), // 200
                     "장소 목록 조회 완료"
+
             );
             return ResponseEntity.ok(response);
         } catch (Exception e) {
