@@ -53,8 +53,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private MeetingRepository meetingRepository;
 
-    @Autowired
-    S3Service s3Service;
+//    @Autowired
+//    S3Service s3Service;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -237,12 +237,16 @@ public class UserServiceImpl implements UserService {
         // 기존 이미지가 있으면 S3에서 삭제
         if (StringUtils.hasText(existingUser.getProfileImg())) {
             log.info("delete image .///././././.");
-            s3Service.deleteImgFromS3(existingUser.getProfileImg());
+            ///S3 관련 주석
+//            s3Service.deleteImgFromS3(existingUser.getProfileImg());
+            ///
         }
         // 새 이미지 업로드 후 url 저장
-        String imgUrl = s3Service.upload(image);
-        log.info("image upload ()(*)(*)(*)(*)(*)(*" + imgUrl);
-        existingUser.setProfileImg(imgUrl);
+        ///S3 관련 주석
+//        String imgUrl = s3Service.upload(image);
+//        log.info("image upload ()(*)(*)(*)(*)(*)(*" + imgUrl);
+//        existingUser.setProfileImg(imgUrl);
+        ///
         existingUser.setUpdatedAt(LocalDateTime.now());
         User updatedUser = userRepository.save(existingUser);
 
