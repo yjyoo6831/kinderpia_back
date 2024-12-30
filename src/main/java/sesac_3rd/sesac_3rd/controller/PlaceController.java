@@ -57,7 +57,7 @@ public class PlaceController {
             ResponseHandler<PlaceReviewDTO> response = new ResponseHandler<>(
                     placeDTO,
                     HttpStatus.OK.value(),
-                    "장소 상세 조회 완료-TEST"
+                    "장소 상세 조회 완료-TEST111"
             );
             return ResponseEntity.ok(response);
         } catch (Exception e) {
